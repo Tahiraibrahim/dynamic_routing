@@ -2,26 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1 {
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h3 {
+  color: #555;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Home page styling */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Accessories list page styling */
+.accessories-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accessories-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accessories-list-container li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.accessories-list-container a {
+  text-decoration: none;
+  color: #0070f3;
+  transition: color 0.3s ease;
+}
+
+.accessories-list-container a:hover {
+  color: #005bb5;
+}
+
+/* Dynamic accessory details page styling */
+.accessory-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
 }
